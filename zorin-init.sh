@@ -2,17 +2,17 @@
 #update everything
 apt install git
 
-apt update
+apt -y update
 
-apt upgrade
+apt -y upgrade 
 
 #install freerdp2
 add-apt-repository ppa:remmina-ppa-team/freerdp-daily
-apt-get update
-apt-get install freerdp2-x11
+apt-get -y update
+apt-get -y install freerdp2-x11
 
 #install freerdp-gui
-apt install python-qt4 python-configparser python-urllib3 
+apt -y install python-qt4 python-configparser python-urllib3 
 
 cd /home/user/Downloads
 git clone https://github.com/justmatt25/RDPGUI.git
@@ -20,8 +20,8 @@ git clone https://github.com/justmatt25/RDPGUI.git
 cd RDPGUI
 
 echo "[DEFAULT]
-RDPBinary = /usr/local/bin/xfreerdp 
-RDPOptions = ~/Downloads/cpub-Personal_VM-Personal_VM-MyDesktop.rdp
+RDPBinary = xfreerdp 
+RDPOptions = ~/Downloads/cpub-StandardUser-StandardUser-CmsRdsh.rdp
 RDPDomain = stbi
 RDPServer = RDSBROKER-VM.STBI.LOCAL
 RDPDomainFlags = /d:
@@ -53,9 +53,9 @@ wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/i915/kbl_guc_ver9_14.bin
 
-apt update
+apt -y update
 
-apt upgrade
+apt -y upgrade
 
 
 
