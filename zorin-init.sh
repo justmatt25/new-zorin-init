@@ -20,6 +20,8 @@ apt install python-qt4 python-configparser python-urllib3
 cd /home/user/Downloads
 git clone https://github.com/justmatt25/RDPGUI.git
 
+cd RDPGUI
+
 echo "[DEFAULT]
 RDPBinary = /usr/local/bin/xfreerdp 
 RDPOptions = ~/Downloads/cpub-Personal_VM-Personal_VM-MyDesktop.rdp
@@ -35,12 +37,12 @@ RDPExtraFlags = /sound:sys:pulse /gfx /fonts +compression +auto-reconnect" > ./r
 #add shortcut
 
 cd /home/user/Desktop
-echo " [Desktop Entry]
+echo "[Desktop Entry]
 Version=2.0
 Name=RDP GUI
 Comment=Use this to run the RDP gui
-Exec=python /home/user/Downloads/RDPGUI-master/rdpgui.py
-Icon=/home/user/Downloads/RDPGUI-master/selectuser.png
+Exec=python /home/user/Downloads/RDPGUI/rdpgui.py
+Icon=/home/user/Downloads/RDPGUI/selectuser.png
 Terminal=false
 Type=Application
 Categories=Utility;Application;" > ./login.desktop 
