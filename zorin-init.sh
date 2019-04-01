@@ -7,12 +7,9 @@ apt update
 apt upgrade
 
 #install freerdp2
-wget http://pub.freerdp.com/releases/freerdp-2.0.0-rc4.tar.gz
-tar -xzf freerdp-2.0.0-rc4.tar.gz
-cd freerdp-2.0.0-rc4
-./configure
-make 
-make install
+add-apt-repository ppa:remmina-ppa-team/freerdp-daily
+apt-get update
+apt-get install freerdp2-x11
 
 #install freerdp-gui
 apt install python-qt4 python-configparser python-urllib3 
